@@ -3,9 +3,13 @@
 ## 一、JavaSE部分
 ### ❤1、Java基础
 1、为什么重写equals还要重写hashcode
+
+在hashmap中介绍了
+
 2、说一下map的分类和常见的情况
 
 3、Object若不重写hashCode()的话，hashCode()如何计算出来的？
+
 4、==比较的是什么？
 
 5、若对一个类不重写，它的equals()方法是如何比较的？
@@ -151,7 +155,12 @@ arraylist在查找的时候支持快速随机查询，但是在插入删除的�
 
 linkedlist的效率会高点，因为数组存在一个扩容的问题，当数组大小不能存放更多元素的时候会进行扩容，变成原来的1.5倍。因此需要在使用是规划好自己需要使用的大小。
 
-5、HashMap底层，负载因子，为啥是2^n？
+**5、HashMap底层，负载因子，为啥是2^n？**
+
+负载因子是0.75
+
+因为在求余的时候可以充分利用hash值，提高散列度，减少hash冲突。
+
 
 6、ConcurrentHashMap锁加在了哪些地方？
 
@@ -165,7 +174,9 @@ linkedlist的效率会高点，因为数组存在一个扩容的问题，当数�
 
 11、ConcurrentHashMap的原理是什么？
 
-12、Java集合类框架的基本接口有哪些？
+**12、Java集合类框架的基本接口有哪些？
+
+总共有两大接口：Collection 和Map ，一个元素集合，一个是键值对集合； 其中List和Set接口继承了Collection接口，一个是有序元素集合，一个是无序元素集合； 而ArrayList和 LinkedList 实现了List接口，HashSet实现了Set接口，这几个都比较常用； HashMap 和HashTable实现了Map接口，并且HashTable是线程安全的，但是HashMap性能更好；
 
 13、为什么集合类没有实现Cloneable和Serializable接口？
 
@@ -192,7 +203,7 @@ linkedlist的效率会高点，因为数组存在一个扩容的问题，当数�
 24、List、Map、Set三个接口存取元素时，各有什么特点？
 
 
-❤5、线程
+## ❤5、线程
 1、多线程中的i++线程安全吗？为什么？
 2、如何线程安全的实现一个计数器？
 
@@ -215,6 +226,8 @@ linkedlist的效率会高点，因为数组存在一个扩容的问题，当数�
 11、线程池有什么好处？
 
 12、cyclicbarrier和countdownlatch的区别
+
+
 
 13、如何理解Java多线程回调方法？
 
@@ -260,6 +273,8 @@ linkedlist的效率会高点，因为数组存在一个扩容的问题，当数�
 ❤6、锁
 
 1、讲一下非公平锁和公平锁在reetrantlock里的实现。
+
+
 2、讲一下synchronized，可重入怎么实现。
 
 3、锁和同步的区别。
